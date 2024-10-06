@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://your-render-backend-url");
 
 if (navigator.geolocation) {
   navigator.geolocation.watchPosition(
