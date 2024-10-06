@@ -5,11 +5,13 @@ const path = require("path");
 
 const app = express();
 const server = http.createServer(app);
+
+// CORS configuration for Socket.io
 const io = socketio(server, {
   cors: {
-    origin: "https://device-tracking-mts183a1s-akhil-tiwaris-projects.vercel.app", // Your Vercel URL
+    origin: "https://device-tracking-mts183a1s-akhil-tiwaris-projects.vercel.app", // Allow your Vercel URL
     methods: ["GET", "POST"],
-    credentials: true // Allow credentials if needed
+    credentials: true // Allow cookies and credentials if necessary
   }
 });
 
