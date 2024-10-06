@@ -11,6 +11,7 @@ const io = socketio(server, {
   cors: {
     origin: [
       "https://device-trackingbyakhiltiwari.vercel.app",
+      "https://device-tracking-c1fr3vo04-akhil-tiwaris-projects.vercel.app", //test deployment URL.
       "https://device-tracking.vercel.app" // Your production URL
     ],
     methods: ["GET", "POST"],
