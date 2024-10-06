@@ -1,4 +1,4 @@
-const socket = io("https://your-render-backend-url");
+const socket = io("https://device-tracking-app.onrender.com");
 
 if (navigator.geolocation) {
   navigator.geolocation.watchPosition(
