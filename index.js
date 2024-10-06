@@ -10,12 +10,12 @@ const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
     origin: [
-      "https://device-tracking-mts183a1s-akhil-tiwaris-projects.vercel.app", // Your first Vercel deployment
-      "https://device-tracking-e3s4620qe-akhil-tiwaris-projects.vercel.app", // Your second Vercel deployment
-      "https://device-tracking-1wp8elu76-akhil-tiwaris-projects.vercel.app" // Your latest Vercel deployment
+      "https://device-tracking.mts183a1s-akhil-tiwaris-projects.vercel.app", // Previous deployment
+      "https://device-tracking-e3s4620qe-akhil-tiwaris-projects.vercel.app", // Another deployment
+      "https://device-tracking.vercel.app" // Your production URL
     ],
     methods: ["GET", "POST"],
-    credentials: true // Allow cookies and credentials if necessary
+    credentials: true // Allow cookies if needed
   }
 });
 
