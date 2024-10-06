@@ -10,15 +10,14 @@ const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
     origin: [
-      "https://device-tracking-mts183a1s-akhil-tiwaris-projects.vercel.app", // Your previous Vercel deployment
-      "https://device-tracking-flbhenkoj-akhil-tiwaris-projects.vercel.app" // Your new Vercel deployment
+      "https://device-tracking-mts183a1s-akhil-tiwaris-projects.vercel.app", // Previous deployment URL
+      "https://device-tracking-flbhenkoj-akhil-tiwaris-projects.vercel.app" // New deployment URL
     ],
     methods: ["GET", "POST"],
-    credentials: true // If you're sending cookies or authentication data
+    credentials: true // If you are sending cookies or using authentication
   }
 });
 
-// Set EJS as the view engine
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -38,12 +37,10 @@ io.on("connection", function (socket) {
   });
 });
 
-// Route to render the index page
 app.get("/", function (req, res) {
   res.render("index");
 });
 
-// Start the server
 const port = process.env.PORT || 8000;
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
