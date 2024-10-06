@@ -10,8 +10,7 @@ const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
     origin: [
-      "https://device-tracking.mts183a1s-akhil-tiwaris-projects.vercel.app", // Previous deployment
-      "https://device-tracking-e3s4620qe-akhil-tiwaris-projects.vercel.app", // Another deployment
+      
       "https://device-tracking.vercel.app" // Your production URL
     ],
     methods: ["GET", "POST"],
